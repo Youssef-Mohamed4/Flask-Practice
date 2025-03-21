@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for
-from Blogger.forms import AddTaskForm
-from Blogger import app, db
-from Blogger.models import Task
+from ToDo.forms import AddTaskForm
+from ToDo import app, db
+from ToDo.models import Task
 
 @app.route('/')
 @app.route('/Tasks')

@@ -7,4 +7,4 @@ app.config['SQLALCHEMY_DATABASE_URI']= "sqlite:///database.db"
 
 db=SQLAlchemy(app)
 
-from Blogger import routes
+from ToDo import routes

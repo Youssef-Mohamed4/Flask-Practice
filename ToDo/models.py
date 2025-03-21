@@ -1,4 +1,4 @@
-from Blogger import db 
+from ToDo import db 
 
 class Task(db.Model):
     id = db.Column(db.Integer,primary_key=True,autoincrement=True)
