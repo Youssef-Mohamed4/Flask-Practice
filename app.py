@@ -1,4 +1,4 @@
-from ToDo import app,db
+from ToDo import app
 
 if __name__=="__main__":
     app.run(debug=True,port=4444)

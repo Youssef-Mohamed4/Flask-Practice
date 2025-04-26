@@ -1,15 +1,19 @@
-from flask import render_template, redirect, url_for
-from ToDo.forms import AddTaskForm
-from ToDo import app, db
+from flask import Blueprint, redirect, url_for, render_template
+from flask_login import login_required,current_user
+from ToDo import db
+from ToDo.tasks.forms import AddTaskForm
 from ToDo.models import Task
 
-@app.route('/')
-@app.route('/Tasks')
+task = Blueprint("task", __name__)
+
+@task.route('/Tasks')
+@login_required
 def tasks():
-    tasks=Task.query.all()
+    tasks=current_user.tasks
     return render_template('tasks.html',title='Tasks',tasks=tasks)
 
-@app.route("/Add-Task",methods=['GET','POST'])
+@task.route("/Tasks/Add",methods=['GET','POST'])
+@login_required
 def add_task():
     form=AddTaskForm()
     if form.validate_on_submit():
