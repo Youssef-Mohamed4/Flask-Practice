@@ -28,7 +28,7 @@
                     </li>
                     {%if current_user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url_for('tasks.tasks')}}">My Tasks</a>
+                        <a class="nav-link" href="{{url_for('task.tasks')}}">My Tasks</a>
                     </li>
                     {%endif%}
                 </ul>
@@ -40,7 +40,7 @@
                             My Account
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="{{url_for('tasks.add_task')}}">Add Task</a></li>
+                            <li><a class="dropdown-item" href="{{url_for('task.add_task')}}">Add Task</a></li>
                             <li><a class="dropdown-item" href="{{url_for('users.logout')}}">Logout</a></li>
                         </ul>
                     </div>
@@ -69,11 +69,7 @@
     <footer class="">
         <p>© 2025 Flask App. All rights reserved.</p>
     </footer>
-    <script src="{{ url_for('static', filename='js/main.js') }}">
-    </script>
-    <script src="{{ url_for('static', filename='js/bootstrap/bootstrap.bundle.min.js') }}">
-    </script>
-    <script src="{{ url_for('static', filename='js/icons/all.min.js') }}">
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}">
     </script>
 </body>
 

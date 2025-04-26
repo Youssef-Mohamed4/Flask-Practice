@@ -11,7 +11,7 @@
             <div class="">
                 <p class=" text-muted"><i class="fa-solid fa-home"></i> This is the home page of our Flask application.
                 </p>
-                {% if not user%}
+                {% if not current_user.is_authenticated%}
                 <p>Please <a href="{{url_for('users.login')}}"><button class="btn btn-primary">login</button></a> to access all features.</p>
                 {%endif%}
             </div>

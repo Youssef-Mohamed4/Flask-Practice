@@ -10,7 +10,7 @@ app.config['SQLALCHEMY_DATABASE_URI']= "sqlite:///database.db"
 db=SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 loginManager = LoginManager(app)
-loginManager.login_view = "home"
+loginManager.login_view = "users.login"
 
 from ToDo.main.routes import main
 from ToDo.users.routes import users

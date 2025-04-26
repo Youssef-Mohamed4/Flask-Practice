@@ -3,6 +3,6 @@ from wtforms import StringField, BooleanField, SubmitField
 from wtforms.validators import DataRequired
 
 class AddTaskForm(FlaskForm):
-    task= StringField("Task",validators=[DataRequired()])
+    title= StringField("Task",validators=[DataRequired()])
     completed= BooleanField("Completed")
     submit_btn=SubmitField("Add Task")
