@@ -6,3 +6,6 @@ class AddTaskForm(FlaskForm):
     title= StringField("Task",validators=[DataRequired()])
     completed= BooleanField("Completed")
     submit_btn=SubmitField("Add Task")
+
+class UpdateTaskForm(AddTaskForm):
+    submit = SubmitField("Edit")
