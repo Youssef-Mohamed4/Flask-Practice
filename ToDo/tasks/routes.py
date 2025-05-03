@@ -26,7 +26,7 @@ def add_task():
 
 @task.route("/tasks/<int:taskId>/update", methods=["GET", "POST"])
 @login_required
-def updateTask(taskId):
+def update_task(taskId):
     form = UpdateTaskForm()
     task = Task.query.get_or_404(taskId)
     if task.author != current_user:
@@ -49,7 +49,7 @@ def updateTask(taskId):
 
 
 @task.route("/tasks/<int:taskId>/delete", methods=["GET"])
-def deletetask(taskId):
+def delete_task(taskId):
     task = Task.query.get_or_404(taskId)
     if task.author != current_user:
         abort(403)
