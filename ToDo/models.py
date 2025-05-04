@@ -1,4 +1,4 @@
-from ToDo import db ,loginManager
+from ToDo import app, db, loginManager
 from flask_login import UserMixin
 
 @loginManager.user_loader
@@ -24,3 +24,6 @@ class User(db.Model, UserMixin):
     
     def __repr__(self):
         return f"User ( {self.name}, {self.email})"
+    
+with app.app_context():
+    db.create_all()

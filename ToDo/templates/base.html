@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/bootstrap.min.css')}}">
     {% if cssFile%}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/' + cssFile)}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/' + cssFile)}}">
     {% endif %}
 </head>
 
@@ -69,7 +69,7 @@
     <footer class="">
         <p>© 2025 Flask App. All rights reserved.</p>
     </footer>
-    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}">
+    <script src="{{ url_for('static', filename='JS/bootstrap.bundle.min.js') }}">
     </script>
 </body>
 
